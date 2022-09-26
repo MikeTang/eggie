@@ -246,8 +246,10 @@
                                   <label class="form-check-label" for="inlineCheckbox1">All Classes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-                                  <label class="form-check-label" for="inlineCheckbox2">Green</label>
+                                  <input class="form-check-input" type="checkbox" id="inlineCheckbox2-g" value="option2"
+                                  onclick=""
+                                   />
+                                  <label class="form-check-label" for="inlineCheckbox2-g">Green</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
@@ -262,7 +264,7 @@
                             <div class="mb-3 row">
                               <label for="html5-text-input" class="col-md-2 col-form-label">Send to parents of</label>
                               <div class="col-md-10">
-                                <input class="form-control" type="text" id="html5-text-input" />
+                                <input class="form-control" type="text" id="html5-text-input" value="Clara Tang" />
                               </div>
                             </div>
                             <div class="mb-3 row">
@@ -275,6 +277,29 @@
                               <label for="html5-text-input" class="col-md-2 col-form-label">Message</label>
                               <div class="col-md-10">
                                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Don't Forget, Photo Day is tomorrow!" rows="15"></textarea>
+                              </div>
+                            </div>
+
+                            <div class="mb-3 row">
+                              <label for="html5-text-input" class="col-md-2 col-form-label">Attachements</label>
+                              <div class="col-md-10">
+                                <div class="form-check mb-1">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1"> Event Caldender </label>
+                                </div>
+                                <input class="form-control" type="month" value="2022-09" id="html5-month-input">
+
+                                <div class="form-check mb-1 mt-3">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1"> Meal Plan </label>
+                                </div>
+                                <input class="form-control" type="month" value="2022-09" id="html5-month-input">
+
+                                <div class="form-check mb-1 mt-3">
+                                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                  <label class="form-check-label" for="defaultCheck1"> Lesson Plan </label>
+                                </div>
+                                <input class="form-control" type="month" value="2022-09" id="html5-month-input">
                               </div>
                             </div>
 
@@ -334,6 +359,18 @@
     <!-- Page JS -->
 
     <script src="assets/js/form-basic-inputs.js"></script>
+
+    <script>
+    $('#inlineCheckbox2-g').click(function(){
+      if ($('#inlineCheckbox2-g').is(":checked")){
+        $('#html5-text-input').val('Clara Tang, Jamie, Tang, Joanna Troung, Matthew Troung, Benjamin Troung');
+      }else{
+        $('#html5-text-input').val('Clara Tang');
+      }
+
+
+    });
+    </script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
